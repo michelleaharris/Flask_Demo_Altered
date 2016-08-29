@@ -2,23 +2,19 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Michelle's Day 8 App</title>
+		<title>{{ticker}} data</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="http://cdn.pydata.org/bokeh/release/bokeh-0.12.0.min.css" type="text/css" />
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.0.min.js"></script>		{{script|indent(8)|safe}}
 	</head>
+	
 	<body>
-		<div>
-  			<h1>Closing Price for August 2016</h1>
-  			<div>
-  				<h4>Please enter a stock ticker eg. GOOG.</h4>
-  				<form id='input' method='post' action='index'>
-  				<p>
-					Ticker symbol: <input type='text' name='ticker' />
-					<input type="submit" value="Submit">
-	  			</p>
-				</form>
-			</div>	
+		<div class=page>
+			<h1>Generated graph for {{ticker}}<br>
+			<a href="/index">Back</a></h1>
+			{{div|indent(12)|safe}}
 		</div>
 	</body>
 </html>
